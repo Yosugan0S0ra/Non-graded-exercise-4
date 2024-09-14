@@ -1,0 +1,46 @@
+import random
+import tkinter as tk
+import time
+card_deck = [
+    {'number': 1,'Name': 'Diablo','Health': 100,'Attack': 90,'Defense': 60},
+    {'number': 2,'Name': 'Medusa','Health': 100,'Attack': 70,'Defense': 70},
+    {'number': 3,'Name': 'Jester', 'Health': 120, 'Attack': 60, 'Defense': 90},
+    {'number': 4,'Name': 'Troll','Health': 150,'Attack': 40,'Defense': 94},
+    {'number': 5,'Name': 'Specter','Health': 100,'Attack': 70,'Defense': 70},
+    {'number': 6,'Name': 'Mist','Health': 100,'Attack': 75,'Defense': 65},
+    {'number': 7,'Name': 'Savage','Health': 100,'Attack': 90,'Defense': 50},
+    {'number': 8,'Name': 'Marauder','Health': 100,'Attack': 85,'Defense': 50},
+    {'number': 9,'Name': 'Wimp','Health': 110,'Attack': 40,'Defense': 85},
+    {'number': 10,'Name': 'Sorcerer','Health': 100,'Attack': 70,'Defense': 55}
+]
+
+deck_size = 5
+hero_card = []
+hero_attack_card = []
+computer_card = []
+computer_attack_card = [] 
+
+#print(card_deck)
+
+def set_card():
+    global hero_card, computer_card
+    print("Now, it's time you choose your cards!")
+    
+    for _ in range(deck_size):
+        chosen_hero_card = random.choice(card_deck)
+        hero_card.append(chosen_hero_card)
+        print(f"Hero card selected: {chosen_hero_card['Name']} (HP: {chosen_hero_card['Health']}, ATK: {chosen_hero_card['Attack']}, DEF: {chosen_hero_card['Defense']})")
+        
+        chosen_computer_card = random.choice(card_deck)
+        computer_card.append(chosen_computer_card)  
+        time.sleep(0.5)
+    print("\nFinal hero cards: ")
+    for card in hero_card:
+        print(f"{card['Name']} (HP: {card['Health']}, ATK: {card['Attack']}, DEF: {card['Defense']})")
+    
+    # print("\nFinal computer cards: ")
+    # for card in computer_card:
+    #     print(f"{card['Name']} (HP: {card['Health']}, ATK: {card['Attack']}, DEF: {card['Defense']})")
+
+
+set_card()

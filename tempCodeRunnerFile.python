@@ -1,0 +1,30 @@
+import random 
+import time
+
+card_deck = [
+    {'number': 1,'Name': 'Diablo','Health': 100,'Attack': 90,'Defense': 60},
+    {'number': 2,'Name': 'Medusa','Health': 100,'Attack': 70,'Defense': 70},
+    {'number': 3,'Name': 'Jester', 'Health': 120, 'Attack': 60, 'Defense': 90},
+    {'number': 4,'Name': 'Troll','Health': 150,'Attack': 40,'Defense': 94},
+    {'number': 5,'Name': 'Specter','Health': 100,'Attack': 70,'Defense': 70},
+    {'number': 6,'Name': 'Mist','Health': 100,'Attack': 75,'Defense': 65},
+    {'number': 7,'Name': 'Savage','Health': 100,'Attack': 90,'Defense': 50},
+    {'number': 8,'Name': 'Marauder','Health': 100,'Attack': 85,'Defense': 50},
+    {'number': 9,'Name': 'Wimp','Health': 110,'Attack': 40,'Defense': 85},
+    {'number': 10,'Name': 'Sorcerer','Health': 100,'Attack': 70,'Defense': 55}
+]
+# Store all the cards in this big deck using a suitable data structure
+
+#This stores the number of cards each player will be given in the game. It can be any number, as long as it's less than or qual to the size of the card_deck
+
+deck_size = 5
+round = 0
+for card in card_deck:
+    print(card)
+while round < deck_size:
+    hero_card[round] = random.choice(list(card_deck))
+    computer_card[round] = random.choice(list(card_deck))
+    round += 1
+print(card_deck[hero_card]['Health'])
+print(type(hero_card))
+
